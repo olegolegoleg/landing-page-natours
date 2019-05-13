@@ -22,6 +22,7 @@ body {
 }
 
 .header {
+    animation: appearance ease-out 0.5s;
     height: 95vh;
     background-image: linear-gradient(
         to right bottom,
@@ -34,6 +35,7 @@ body {
 }
 
 .logo-box {
+    animation: appearanceWithScale ease-out 1s;
     position: absolute;
     top: 40px;
     left: 40px;
@@ -59,7 +61,9 @@ body {
     font-size: 60px;
     display: block;
     letter-spacing: 36.12px;
-    font-weight: 400;    
+    font-weight: 400;
+    animation: appearanceLeftToRight ease-out 1s;    
+    backface-visibility: hidden;
 }
 
 .heading-primary-sub {
@@ -67,4 +71,57 @@ body {
     display: block;
     letter-spacing: 18px;
     font-weight: 700;    
+    animation: appearanceRightToLeft ease-out 1s;
+}
+
+@keyframes appearance {
+    from {
+        opacity: 0;        
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes appearanceWithScale {
+    from {
+        opacity: 0;
+        transform: scale(0.90);
+    }
+    to {
+        opacity: 100;      
+        transform: scale(1);  
+    }
+}
+
+@keyframes appearanceLeftToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-10%) scale(0.9);
+    }
+
+    80% {
+        transform: translateX(0.5%)  scale(1);
+    }
+
+    100% {
+        opacity: 100;
+        transform: translate(0);
+    }
+}
+
+@keyframes appearanceRightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(10%) scale(0.9);
+    }
+
+    80% {
+        transform: translateX(-0.5%) scale(1);
+    }
+
+    100% {
+        opacity: 100;
+        transform: translate(0);
+    }
 }
