@@ -86,6 +86,7 @@ body {
     animation: appearance ease-out .5s;
     transition: all ease-out .2s;
     backface-visibility: hidden;
+    border: 1px solid red;
 }
 
 .btn:hover {
