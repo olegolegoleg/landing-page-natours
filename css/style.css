@@ -42,7 +42,7 @@ body {
 }
 
 .logo {
-    width: 35px;
+    height: 35px;
 }
 
 .text-box {
@@ -50,11 +50,13 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
     color: #FFF;
-    text-transform: uppercase;        
+    text-transform: uppercase;
+    margin-bottom: 60px;    
 }
 
 .heading-primary-main {
@@ -72,6 +74,27 @@ body {
     letter-spacing: 18px;
     font-weight: 700;    
     animation: appearanceRightToLeft ease-out 1s;
+}
+
+.btn {
+    border-radius: 50;        
+    text-decoration: none;
+    padding: 15px 35px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    display: inline-block;
+    animation: appearance ease-out .5s;
+    transition: all ease-out .2s;
+    backface-visibility: hidden;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-white {
+    background-color: #FFF;
+    color: #777;
 }
 
 @keyframes appearance {
