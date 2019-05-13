@@ -42,3 +42,29 @@ body {
 .logo {
     width: 35px;
 }
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    color: #FFF;
+    text-transform: uppercase;        
+}
+
+.heading-primary-main {
+    font-size: 60px;
+    display: block;
+    letter-spacing: 36.12px;
+    font-weight: 400;    
+}
+
+.heading-primary-sub {
+    font-size: 20px;
+    display: block;
+    letter-spacing: 18px;
+    font-weight: 700;    
+}
