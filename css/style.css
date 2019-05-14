@@ -84,7 +84,7 @@ body {
     text-transform: uppercase;
     border-radius: 20px;
     display: inline-block;
-    animation: appearance ease-out .5s;
+    animation: appearanceBottomToTop ease-out 1s;
     transition: all ease-out .2s;
     backface-visibility: hidden;    
 }
@@ -109,6 +109,28 @@ body {
     background-color: rgb(252, 252, 252);
 }
 
+.btn::after {
+    content: "";
+    display: inline-block;    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: inherit;
+    transition: all .2s;
+}
+
+.btn:hover::after {
+    transform: scale(1.2) translateY(-10px);
+    opacity: 0;
+}
+
+.btn-white::after {    
+    background-color: #FFF;    
+}
+
 .btn-bouncy {
     animation: bouncy 5s 10s 2 linear;
     position: relative;
@@ -122,8 +144,7 @@ body {
         top:0em;
     }
     43% {
-        top:-0.45em;
-        color: red;
+        top:-0.45em;        
     }
     46% {
         top:0em;
@@ -188,5 +209,16 @@ body {
     100% {
         opacity: 100;
         transform: translate(0);
+    }
+}
+
+@keyframes appearanceBottomToTop {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    to {
+        opacity: 100;
+        transform: translate(0) scale(1);;
     }
 }
