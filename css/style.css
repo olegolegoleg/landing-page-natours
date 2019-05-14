@@ -76,7 +76,8 @@ body {
     animation: appearanceRightToLeft ease-out 1s;
 }
 
-.btn {
+.btn:link,
+.btn:visited {
     border-radius: 50;        
     text-decoration: none;
     padding: 15px 35px;
@@ -89,14 +90,54 @@ body {
 }
 
 .btn:hover {
-    transform: scale(1.03) translateY(-3px);
-    box-shadow: 0px 10px 25px -20px rgba(0,0,0,0.75);
+    font-size: 1.01em;
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: 0px 10px 25px -20px rgba(0,0,0,0.75);    
+}
+
+.btn:active {
+    transform: scale(1.01);
+    box-shadow: 0px 10px 15px -20px rgba(0,0,0,0.7);
 }
 
 .btn-white {
     background-color: #FFF;
     color: #777;
 }
+
+.btn-white:hover {
+    background-color: rgb(252, 252, 252);
+}
+
+.btn-bouncy {
+    animation: bouncy 5s 10s 2 linear;
+    position: relative;
+}
+
+@keyframes bouncy {
+    0% {
+        top:0em;
+    }
+    40% {
+        top:0em;
+    }
+    43% {
+        top:-0.45em;
+        color: red;
+    }
+    46% {
+        top:0em;
+    }
+    48% {
+        top:-0.2em;
+    }
+    50% {
+        top:0em;
+    }
+    100% {
+        top:0em;
+    }
+} 
 
 @keyframes appearance {
     from {
